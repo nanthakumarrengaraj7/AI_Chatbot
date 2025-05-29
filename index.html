@@ -35,20 +35,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
+    <title>Responsive Chatbot</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="chat-container">
         <div class="chat-header">
-            <h1>AI Chatbot</h1>
+            <h1>AI Chat Assistant</h1>
         </div>
-        <div class="chat-message" id="chat-messages">
-            <!-- Empty container - messages will be added by JavaScript -->
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+            </div>
+            <div class="typing-indicator" id="typing-indicator">
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
         </div>
         <div class="chat-input">
-            <input type="text" id="user-input" placeholder="type your message here...">
-            <button id="send-button">Send</button>
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
         </div>
     </div>
     <script src="./script.js"></script>
